@@ -1,11 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Superninja</title>
-</head>
-<body>
-  <div>Superninja</div>
-</body>
+<!doctype html>
+<html>
+    <head lang="en">
+        <title>Anduin Design System</title>
+        <meta charset="UTF-8">
+        <meta name="title" content="Anduin Design">
+        <meta name="description" content="Anduin's UI framework for the web">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/icon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/app.css">
+        <link rel="stylesheet" href="/doc.css">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://anduin.design/">
+        <meta property="og:title" content="Anduin Design System">
+        <meta property="og:description" content="Anduin's UI framework for the web">
+        <meta property="og:image" content="https://anduin.design/image.png">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://anduin.design/">
+        <meta property="twitter:title" content="Anduin Design System">
+        <meta property="twitter:description" content="Anduin's UI framework for the web">
+        <meta property="twitter:image" content="https://anduin.design/image.png">
+    </head>
+    <body class="font-sans leading-28">
+        <div id="root">
+            <div class="flex h-vh100 items-center justify-center bg-gray-1 text-gray-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="56" height="56" class="block">
+                    <path fill="currentColor" fill-rule="evenodd" d="M8 2l7 11.2h-2.8l-1.4-2.24-1.4 2.24H6.6l-1.4-2.24-1.4 2.24H1L8 2zM6.67 8.65L8 10.82l1.33-2.17L8 6.41 6.67 8.65z"></path>
+                </svg>
+            </div>
+        </div>
+        <script type="importmap">
+            {
+              "imports": {
+                "app": "/app.js"
+              }
+            }
+        </script>
+        <script type="module">
+            import { designApp } from "app";
+            designApp.run()
+        </script>
+    </body>
 </html>
