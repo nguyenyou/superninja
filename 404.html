@@ -1,40 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Single Page Apps for GitHub Pages</title>
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script takes the current url and converts the path and query
-      // string into just a query string, and then redirects the browser
-      // to the new url with only a query string and hash fragment,
-      // e.g. https://www.foo.tld/one/two?a=b&c=d#qwe, becomes
-      // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
-      // Note: this 404.html file must be at least 512 bytes for it to work
-      // with Internet Explorer (it is currently > 512 bytes)
-
-      // If you're creating a Project Pages site and NOT using a custom domain,
-      // then set pathSegmentsToKeep to 1 (enterprise users may need to set it to > 1).
-      // This way the code will only replace the route part of the path, and not
-      // the real directory in which the app resides, for example:
-      // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
-      // https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
-      // Otherwise, leave pathSegmentsToKeep as 0.
-      var pathSegmentsToKeep = 0;
-
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
-
-    </script>
-  </head>
-  <body>
-  </body>
+    <head lang="en">
+        <title>Anduin Design System</title>
+        <meta charset="UTF-8">
+        <meta name="title" content="Anduin Design">
+        <meta name="description" content="Anduin's UI framework for the web">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/icon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/app.css">
+        <link rel="stylesheet" href="/doc.css">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://anduin.design/">
+        <meta property="og:title" content="Anduin Design System">
+        <meta property="og:description" content="Anduin's UI framework for the web">
+        <meta property="og:image" content="https://anduin.design/image.png">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://anduin.design/">
+        <meta property="twitter:title" content="Anduin Design System">
+        <meta property="twitter:description" content="Anduin's UI framework for the web">
+        <meta property="twitter:image" content="https://anduin.design/image.png">
+    </head>
+    <body class="font-sans leading-28">
+        <div id="root">
+            <div class="flex h-vh100 items-center justify-center bg-gray-1 text-gray-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="56" height="56" class="block">
+                    <path fill="currentColor" fill-rule="evenodd" d="M8 2l7 11.2h-2.8l-1.4-2.24-1.4 2.24H6.6l-1.4-2.24-1.4 2.24H1L8 2zM6.67 8.65L8 10.82l1.33-2.17L8 6.41 6.67 8.65z"></path>
+                </svg>
+            </div>
+        </div>
+        <script type="importmap">
+            {
+              "imports": {
+                "app": "/app.js"
+              }
+            }
+        </script>
+        <script type="module">
+            import { designApp } from "app";
+            designApp.run()
+        </script>
+    </body>
 </html>
